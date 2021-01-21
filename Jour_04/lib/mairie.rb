@@ -53,11 +53,4 @@ def perform
       end
     end
 end
-
-array_url = []
-page = Nokogiri::HTML(URI.open("http://www.annuaire-des-mairies.com/val-d-oise.html"))
-moncul = page.css('a=href')
-moncul.each do |url|
-    array_url << url.text
-end
-puts array_url
+perform
